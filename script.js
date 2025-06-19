@@ -70,17 +70,26 @@ document.getElementById("modeToggle").addEventListener("click", () => {
         container.appendChild(statEl);
     });
     
-    // Run on load
     window.addEventListener("load", () => {
-        // Hide loader
         const loader = document.getElementById("loader");
-        if (loader) loader.style.display = "none";
-    
-        // Animate bars
-        document.querySelectorAll(".bar").forEach((bar, i) => {
+
+        // Minimum loader time: 2 seconds (2000 ms)
+        setTimeout(() => {
+            if (loader) {
+            loader.style.transition = "opacity 0.5s ease";
+            loader.style.opacity = "0";
+            // Fully remove loader after fade-out completes
             setTimeout(() => {
-                bar.style.width = `${stats[i].percent}%`;
-            }, i * 100);
+                loader.style.display = "none";
+
+              // Now animate the bars
+                document.querySelectorAll(".bar").forEach((bar, i) => {
+                setTimeout(() => {
+                    bar.style.width = `${stats[i].percent}%`;
+                }, i * 100);
+                });
+            }, 500); // match the fade-out duration
+            }
+        }, 5000); // delay before starting to hide loader
         });
-    });
     
