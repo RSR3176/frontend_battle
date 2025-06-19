@@ -1,0 +1,355 @@
+:root {
+--bg-color-light: #ffffff;
+--text-color-light: #111;
+--bg-color-dark: #121212;
+--text-color-dark: #f0f0f0;
+--accent: #4f46e5;
+}
+
+[data-theme="light"] {
+background-color: var(--bg-color-light);
+color: var(--text-color-light);
+}
+
+[data-theme="dark"] {
+background-color: var(--bg-color-dark);
+color: var(--text-color-dark);
+}
+
+body, html {
+margin: 0;
+padding: 0;
+height: 100%;
+font-family: 'Segoe UI', sans-serif;
+transition: background-color 0.3s, color 0.3s;
+cursor: pointer;
+overflow-x: hidden;
+}
+
+#loader {
+position: fixed;
+width: 100%;
+height: 100vh;
+background: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+padding: 1rem 2rem;
+background-color: var(--accent);
+color: white;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1.5rem;
+align-items: center;
+}
+
+.nav-links a {
+text-decoration: none;
+color: white;
+font-weight: bold;
+}
+
+section {
+padding: 4rem 2rem;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 1.5rem;
+}
+
+.feature-card {
+background: rgba(0, 0, 0, 0.05);
+padding: 1rem;
+border-radius: 8px;
+text-align: center;
+}
+
+
+.box {
+position: absolute;
+background-color: #4f46e5;
+opacity: 0.8;
+border-radius: 4px;
+animation: ripple-move 1s ease-out forwards;
+}
+
+@keyframes ripple-move {
+100% {
+transform: translate(var(--x-move), var(--y-move)) scale(0.5);
+opacity: 0;
+}
+}
+#modeToggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+}
+
+/* ============================= */
+/* Statistics Bars*/
+/* ============================= */
+
+.container {
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+}
+
+.container h1,
+.container h2 {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.stat {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.icon {
+width: 40px;
+height: 40px;
+margin-right: 15px;
+font-size: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #6a0063;
+color: white;
+border-radius: 50%;
+}
+
+.label {
+flex: 1;
+font-weight: 500;
+}
+
+.bar-wrapper {
+flex: 2;
+background-color: #e6f0f0;
+height: 20px;
+border-radius: 15px;
+overflow: hidden;
+margin-left: 15px;
+position: relative;
+}
+
+.bar {
+height: 100%;
+width: 0;
+background: linear-gradient(90deg, #b64fc8, #a53ae6);
+border-radius: 15px;
+transition: width 1s ease-in-out;
+}
+
+.percent {
+position: absolute;
+right: 10px;
+top: -25px;
+font-weight: bold;
+color: #333;
+}
+
+#title{
+font-size: 30px;
+}
+
+[data-theme="dark"] .framework-section {
+        background: #000000;
+        color: white;
+}
+
+[data-theme="dark"] .framework-card {
+        background: #1c1c1c;
+        color: white;
+        box-shadow: 0 6px 14px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .framework-card h4,
+[data-theme="dark"] .framework-card p {
+        color: white;
+}
+
+[data-theme="dark"] .framework-card img {
+        background-color: #1c1c1c;
+        border-color: #333;
+}
+
+
+
+.framework-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: linear-gradient(to bottom right, #f0f0ff, #ffffff);
+}
+
+.framework-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #4f46e5;
+}
+
+.framework-section .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        color: #666;
+}
+
+.frameworks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+}
+
+.framework-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.framework-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 16px rgba(0,0,0,0.08);
+}
+
+.framework-card img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: contain;
+        background-color: #fff;
+        padding: 4px;
+        margin-bottom: 0.5rem;
+        border: 1px solid #ddd;
+}
+
+.framework-card h4 {
+        margin: 0.4rem 0;
+        color: #333;
+        font-size: 1rem;
+}
+
+.framework-card p {
+        font-size: 0.85rem;
+        color: #555;
+}
+/* ============================= */
+/* Testimonials Section */
+/* ============================= */
+[data-theme="dark"] #testimonials {
+        background-color: #000;
+        color: white;
+        background: black;
+}
+
+[data-theme="dark"] .testimonial-card {
+        background-color: #1a1a1a;
+        color: white;
+        box-shadow: 0 6px 14px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .testimonial-card h4,
+[data-theme="dark"] .testimonial-card p {
+        color: white;
+}
+
+[data-theme="dark"] .testimonial-card img {
+        border: 2px solid #444;
+}
+
+#testimonials {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+}
+
+#testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #4f46e5;
+}
+
+#testimonials .subtitle {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 30px;
+}
+
+.testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+}
+
+.testimonial-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+}
+
+.testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.testimonial-card img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #333;
+}
+
+.testimonial-card p {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.4;
+}
+
+#loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000; /* fallback background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+}
+
+#loader video {
+        width: 150px;
+        height: auto;
+}

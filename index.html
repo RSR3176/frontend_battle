@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Battle 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <video autoplay muted loop playsinline>
+        <source src="assets/loader.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Frontend Battle</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#frameworks">Frameworks</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="modeToggle">🌙</button></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h1 id="title">Welcome to the Frontend Battle</h1>
+        <p>Pixel-perfect design meets creative innovation.</p>
+        <div class="container">
+            <h1>AI Usage in Frontend</h1>
+            <div id="stats-container"></div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div id="ripple-container">
+                    <div class="content">
+                        <h1>Click Anywhere</h1>
+                        <p>Each click triggers a ripple effect made of flying boxes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="content">
+                    <h1>Statistics</h1>
+                    <p>The statistics of AI usage in frontend is presented above.</p>
+                </div>
+            </div>
+            <div class="feature-card"><div class="content">
+                <h1>Light/Dark mode</h1>
+                <p>Toggle between light and dark mode with a single click.</p>
+            </div></div>
+            <div class="feature-card"><div class="content">
+                <h1>Frameworks</h1>
+                <p>The cards have hover effects and respond to theme change</p>
+            </div></div>
+            <div class="feature-card"><div class="content">
+                <h1>Testimonials</h1>
+                <p>Display three testimonial cards with avatars, names, and feedback quotes.</p>
+            </div></div>
+            <div class="feature-card"><div class="content">
+                <h1>Features Section</h1>
+                <p>Uses the grid layout for displaying 6 cards.</p>
+            </div></div>
+            
+        </div>
+    </section>
+
+    <section class="framework-section" id="frameworks">
+    <h2>Most Popular Web Frameworks</h2>
+    <p class="subtitle">Powering the modern web across backend and frontend</p>
+
+    <div class="frameworks-grid">
+        <div class="framework-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React.js">
+        <h4>React.js</h4>
+        <p>Component-based UI library by Meta.</p>
+        </div>
+
+        <div class="framework-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/vue-9.svg" alt="Vue.js">
+        <h4>Vue.js</h4>
+        <p>Progressive framework for building UIs.</p>
+        </div>
+
+        <div class="framework-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular">
+        <h4>Angular</h4>
+        <p>Full-featured SPA framework by Google.</p>
+        </div>
+
+        <div class="framework-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express">
+        <h4>Express</h4>
+        <p>Minimalist web framework for Node.js.</p>
+        </div>
+
+        <div class="framework-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/flask.svg" alt="Flask">
+        <h4>Flask</h4>
+        <p>Lightweight Python web framework.</p>
+        </div>
+    
+
+    </div>
+    </section>
+    <section id="frontend">
+    <h2>About Frontend Development</h2>
+    <p>
+    Frontend development is the process of building the visible parts of a website or web application—the interface users interact with directly. It involves turning design concepts into functional, responsive layouts using HTML for structure, CSS for styling, and JavaScript for interactivity. A good frontend developer not only focuses on how things look but also how they feel to use—ensuring accessibility, cross-browser compatibility, and seamless performance across devices.
+    </p>
+    <p>
+    In today’s digital landscape, frontend development has evolved significantly. With the rise of powerful libraries and frameworks like React, Vue, and Angular, developers can build complex, component-based user interfaces that update dynamically and efficiently. Frontend development also encompasses API integration, state management, and performance optimization—essential elements for creating scalable and high-performing applications.
+    </p>
+    <p>
+    The frontend is the bridge between design and functionality. It's where creativity meets logic, allowing developers to bring ideas to life in the browser. Whether it’s animating a button, displaying real-time data, or building a mobile-friendly layout, frontend developers play a critical role in shaping user experience and defining how users perceive a product.
+    </p>
+    </section>
+    <section id="testimonials">
+    <h2>What Developers Say</h2>
+    <p class="subtitle">Hear it from our global community</p>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+        <img src="https://i.pravatar.cc/80?img=11" alt="Dev 1">
+        <h4>Jane Developer</h4>
+        <p>"Frontend Battle gave our team a creative spark. The animations and features are brilliant!"</p>
+        </div>
+        <div class="testimonial-card">
+        <img src="https://i.pravatar.cc/80?img=12" alt="Dev 2">
+        <h4>John Smith</h4>
+        <p>"I loved the ripple effect and data visualizations. The UI is smooth, clean and responsive."</p>
+        </div>
+
+        <div class="testimonial-card">
+        <img src="https://i.pravatar.cc/80?img=13" alt="Dev 3">
+        <h4>Emily Lin</h4>
+        <p>"It’s not just visually appealing, it’s smartly structured. Great learning resource too!"</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaboration or feedback!</p>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
